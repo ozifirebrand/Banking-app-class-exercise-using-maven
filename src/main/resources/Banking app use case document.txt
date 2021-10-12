@@ -7,12 +7,12 @@ Date:
 Document description
 The document describes the activities that will be carried out in a banking app program.
 The activities include:
-Create account
-Log in/out
-Withdraw
-Deposit
-Change PIN
-Make enquiries
+1. Create account
+2. Log in/out
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Make enquiries
 
 Stakeholders:
 The Bank
@@ -22,6 +22,7 @@ Activity: Create account
 
 Preconditions
 User does not have an account on the app
+
 Trigger
 User indicates interest to open an account with Bank.
 
@@ -30,14 +31,37 @@ User opens app
 User clicks create account
 User inputs first name, last name and other personal and financial details on the app
 Bank verifies the details
-Bank confirms the creation of account
+User inputs new pin for the account twice
+Bank approves the inputted pin
+Bank generates account number for the User.
 Bank issues account number to User to allow transactions on the app
+Bank confirms the creation of account
 
 Alternative events
-
-
+User opens app
+User clicks on "Create account"
+User inputs personal details.
+Bank is unable to verify the details completely
+Bank asks User to input new details
+If User refuses to input new details, process terminates
+Else, User inputs pin.
+Bank approves the pin and generates account number for the User
+Account number is issued to the User
+Account creation is confirmed.
 Post-conditions
-User can transact on the bank app
+User can transact on the bank app using the account
+
+Activity 2: Log in
+Precondition
+User has an account with the Bank
+
+Trigger
+User decides to transact on the app
+
+Main flow
+User opens app
+User clicks on "Log in" on the application
+User inputs email and pin
 
 Customer can-
 Initiate account creation
