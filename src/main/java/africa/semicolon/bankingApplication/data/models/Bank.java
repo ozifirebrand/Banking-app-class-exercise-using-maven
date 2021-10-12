@@ -1,8 +1,11 @@
 package africa.semicolon.bankingApplication.data.models;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
+@Data
 
 public class Bank {
-    private List<Account> accounts = new ArrayList<Account>();
+    private final List<Account> accounts = new ArrayList<Account>();
 }
