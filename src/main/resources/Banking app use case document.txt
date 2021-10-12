@@ -3,20 +3,31 @@ It is a collection of possible scenarios related to a particular goa.
 Document title:
 A Banking Program
 
+Date:
+11-10-2021
+
 Document description
 The document describes the activities that will be carried out in a banking app program.
 
 Stakeholders:
 The Bank
-Users
+Users/ Customers
 
 Preconditions
+User does not have an account on the app
+Trigger
 User indicates interest to open an account with Bank.
 
 Main flow
-User opens app and clicks create account
-User has an Account with Bank
+User opens app
+User clicks create account
+User inputs first name, last name and other personal and financial details on the app
+Bank verifies the details
+Bank confirms the creation of account
+Bank issues account number to User to allow transactions on the app
 
+Post-conditions
+User can transact on the bank app
 
 Customer can-
 Initiate account creation
@@ -35,14 +46,3 @@ Account manager can-
 Approve withdrawal of money
 Approve deposit and/or transfer
 Verify account creation details
-Communicate 
-
-Date:
-11-10-2021
-
-Stakeholders and Roles:
-Bank users
-Admin
-
-Preconditions
-User expresses interest to open account
