@@ -6,10 +6,19 @@ Date:
 
 Document description
 The document describes the activities that will be carried out in a banking app program.
+The activities include:
+Create account
+Log in/out
+Withdraw
+Deposit
+Change PIN
+Make enquiries
 
 Stakeholders:
 The Bank
 Users/ Customers
+
+Activity: Create account
 
 Preconditions
 User does not have an account on the app
