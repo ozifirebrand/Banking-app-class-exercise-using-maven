@@ -1,5 +1,3 @@
-The use case should contain all system activities that have significance to the users.
-It is a collection of possible scenarios related to a particular goa.
 Document title:
 A Banking Program
 
@@ -25,6 +23,9 @@ User inputs first name, last name and other personal and financial details on th
 Bank verifies the details
 Bank confirms the creation of account
 Bank issues account number to User to allow transactions on the app
+
+Alternative events
+
 
 Post-conditions
 User can transact on the bank app
