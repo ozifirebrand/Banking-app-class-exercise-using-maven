@@ -38,20 +38,49 @@ class CustomerRepositoryImplTest {
         customer.setBvn(bvn.getId());
         customer.setFirstName("Mary");
         customer.setLastName("Seyi");
-        Customer savedCustomer = customerRepository.save(customer);
+        customerRepository.save(customer);
         Customer foundCustomer = customerRepository.findByCustomerId("675368996");
-        assertEquals(savedCustomer, foundCustomer);
+        assertEquals(customer, foundCustomer);
     }
 
     @Test
     void delete() {
+        Customer customer = new Customer();
+        Bvn bvn = new Bvn("675368996", customer);
+        customer.setBvn(bvn.getId());
+        customer.setFirstName("Mary");
+        customer.setLastName("Seyi");
+        customerRepository.save(customer);
+        assertNotNull(customerRepository.findByCustomerId("675368996"));
+        customerRepository.delete(customer);
+        assertNull(customerRepository.findByCustomerId("675368996"));
+
     }
 
     @Test
-    void testDelete() {
+    void testDeleteById() {
+        Customer customer = new Customer();
+        Bvn bvn = new Bvn("675368996", customer);
+        customer.setBvn(bvn.getId());
+        customer.setFirstName("Mary");
+        customer.setLastName("Seyi");
+        customerRepository.save(customer);
+        assertNotNull(customerRepository.findByCustomerId("675368996"));
+        customerRepository.delete("675368996");
+        assertNull(customerRepository.findByCustomerId("675368996"));
+
     }
 
     @Test
     void findAll() {
+        Customer customer = new Customer();
+        Bvn bvn = new Bvn("675368996", customer);
+        customer.setBvn(bvn.getId());
+        customer.setFirstName("Mary");
+        customer.setLastName("Seyi");
+        customerRepository.save(customer);
+        customerRepository.save(customer);
+        customerRepository.save(customer);
+        assertEquals(3, customerRepository.findAll().size());
     }
 }
