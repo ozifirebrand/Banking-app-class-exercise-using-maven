@@ -6,5 +6,4 @@ import lombok.Data;
 public final class Bvn {
     private final String id;
     private final Customer customer;
-
 }

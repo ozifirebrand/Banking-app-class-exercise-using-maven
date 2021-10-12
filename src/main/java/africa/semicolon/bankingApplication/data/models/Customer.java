@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Customer {
     private List<Account> account = new ArrayList<Account>();
-    private Bvn bvn;
+    private String bvn;
     private String firstName;
     private String lastName;
 }
