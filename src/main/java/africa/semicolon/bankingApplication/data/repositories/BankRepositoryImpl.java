@@ -16,7 +16,12 @@ public class BankRepositoryImpl implements BankRepository{
 
     @Override
     public Account findAccountById(String id) {
-        return null;
+        for (Account account: accounts){
+            if ( id.equals(account.getCustomerId()) ){
+                return account;
+            }
+        }
+        return null ;
     }
 
     @Override

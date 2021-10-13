@@ -35,12 +35,16 @@ class BankRepositoryImplTest {
 
     @Test
     void findAccountById() {
-
-
+        bankRepository.saveAccount(account);
+        account.setCustomerId("5943803");
+        account.setAccountNumber("443920458");
+        account.setAccountType(AccountType.SAVINGS);
+        assertEquals(account, bankRepository.findAccountById("5943803"));
     }
 
     @Test
     void findAll() {
+
     }
 
     @Test
