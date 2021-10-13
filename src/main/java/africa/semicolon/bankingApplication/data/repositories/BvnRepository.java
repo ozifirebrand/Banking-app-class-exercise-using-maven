@@ -4,10 +4,10 @@ import africa.semicolon.bankingApplication.data.models.Customer;
 
 import java.util.List;
 
-public interface CustomerRepository {
+public interface BvnRepository {
     Customer save(Customer customer);
-    Customer findByCustomerId(String id);
+    Customer findById(String id);
+    void deleteById(String id);
     void delete(Customer customer);
-    void delete(String id);
     List<Customer> findAll();
 }
