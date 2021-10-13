@@ -1,8 +1,6 @@
 package africa.semicolon.bankingApplication.data.repositories;
 
-import africa.semicolon.bankingApplication.data.models.Bvn;
 import africa.semicolon.bankingApplication.data.models.Customer;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,17 +14,12 @@ class CustomerRepositoryImplTest {
         customerRepository = new CustomerRepositoryImpl();
     }
 
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void save() {
         Customer customer = new Customer();
-        Bvn bvn = new Bvn("675368996", customer);
-        customer.setBvn(bvn.getId());
         customer.setFirstName("Mary");
         customer.setLastName("Seyi");
+        customer.setBvn("675368996");
         Customer savedCustomer = customerRepository.save(customer);
         assertEquals(customer, savedCustomer);
     }
@@ -34,8 +27,7 @@ class CustomerRepositoryImplTest {
     @Test
     void findByCustomerId() {
         Customer customer = new Customer();
-        Bvn bvn = new Bvn("675368996", customer);
-        customer.setBvn(bvn.getId());
+        customer.setBvn("675368996");
         customer.setFirstName("Mary");
         customer.setLastName("Seyi");
         customerRepository.save(customer);
@@ -46,8 +38,7 @@ class CustomerRepositoryImplTest {
     @Test
     void delete() {
         Customer customer = new Customer();
-        Bvn bvn = new Bvn("675368996", customer);
-        customer.setBvn(bvn.getId());
+        customer.setBvn("675368996");
         customer.setFirstName("Mary");
         customer.setLastName("Seyi");
         customerRepository.save(customer);
@@ -60,8 +51,7 @@ class CustomerRepositoryImplTest {
     @Test
     void testDeleteById() {
         Customer customer = new Customer();
-        Bvn bvn = new Bvn("675368996", customer);
-        customer.setBvn(bvn.getId());
+        customer.setBvn("675368996");
         customer.setFirstName("Mary");
         customer.setLastName("Seyi");
         customerRepository.save(customer);
@@ -74,8 +64,7 @@ class CustomerRepositoryImplTest {
     @Test
     void findAll() {
         Customer customer = new Customer();
-        Bvn bvn = new Bvn("675368996", customer);
-        customer.setBvn(bvn.getId());
+        customer.setBvn("675368996");
         customer.setFirstName("Mary");
         customer.setLastName("Seyi");
         customerRepository.save(customer);

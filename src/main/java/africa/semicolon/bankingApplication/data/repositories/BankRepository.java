@@ -6,11 +6,11 @@ import africa.semicolon.bankingApplication.data.models.Bank;
 import java.util.List;
 
 public interface BankRepository {
-    Account saveAccount(Account account);
-    Account findAccountById(String id);
-    List<Account> findAll();
+    Bank saveBank(Bank bank);
+    Bank findBankById(String id);
+    List<Bank> findAll();
     void delete(String id);
-    void delete(Account account);
+    void delete(Bank account);
 
 
 }

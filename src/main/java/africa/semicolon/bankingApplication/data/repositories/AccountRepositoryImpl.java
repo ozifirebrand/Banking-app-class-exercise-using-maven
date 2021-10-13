@@ -1,26 +1,25 @@
 package africa.semicolon.bankingApplication.data.repositories;
 
 import africa.semicolon.bankingApplication.data.models.Account;
-import africa.semicolon.bankingApplication.data.models.Bank;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BankRepositoryImpl implements BankRepository{
+public class AccountRepositoryImpl implements AccountRepository{
 
     @Override
-    public Bank saveBank(Bank bank) {
+    public Account save(Account account) {
+        return account;
+    }
+
+    @Override
+    public Account findByAccountId(String id) {
         return null;
     }
 
     @Override
-    public Bank findBankById(String id) {
-        return null;
-    }
+    public void delete(Account account) {
 
-    @Override
-    public List<Bank> findAll() {
-        return null;
     }
 
     @Override
@@ -29,7 +28,7 @@ public class BankRepositoryImpl implements BankRepository{
     }
 
     @Override
-    public void delete(Bank account) {
-
+    public List<Account> findAll() {
+        return null;
     }
 }
