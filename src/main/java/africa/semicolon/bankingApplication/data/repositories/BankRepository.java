@@ -8,7 +8,7 @@ import java.util.List;
 public interface BankRepository {
     Account saveAccount(Account account);
     Account findAccountById(String id);
-    List<Bank> findAll();
+    List<Account> findAll();
     void delete(String id);
     void delete(Account account);
 

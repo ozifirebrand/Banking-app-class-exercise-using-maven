@@ -44,14 +44,34 @@ class BankRepositoryImplTest {
 
     @Test
     void findAll() {
-
+        account.setCustomerId("5943803");
+        account.setAccountNumber("443920458");
+        account.setAccountType(AccountType.SAVINGS);
+        bankRepository.saveAccount(account);
+        bankRepository.saveAccount(account);
+        bankRepository.saveAccount(account);
+        bankRepository.saveAccount(account);
+        assertEquals(4, bankRepository.findAll().size());
     }
 
     @Test
     void delete() {
+        account.setCustomerId("5943803");
+        account.setAccountNumber("443920458");
+        account.setAccountType(AccountType.SAVINGS);
+        bankRepository.saveAccount(account);
+        bankRepository.delete(account);
+        assertNull(bankRepository.findAccountById("5943803"));
     }
 
     @Test
-    void testDelete() {
+    void testDeleteById() {
+        account.setCustomerId("5943803");
+        account.setAccountNumber("443920458");
+        account.setAccountType(AccountType.SAVINGS);
+        bankRepository.saveAccount(account);
+        bankRepository.delete("5943803");
+        assertNull(bankRepository.findAccountById("5943803"));
+
     }
 }

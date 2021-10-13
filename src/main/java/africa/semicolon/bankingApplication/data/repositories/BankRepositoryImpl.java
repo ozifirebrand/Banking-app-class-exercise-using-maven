@@ -25,17 +25,17 @@ public class BankRepositoryImpl implements BankRepository{
     }
 
     @Override
-    public List<Bank> findAll() {
-        return null;
+    public List<Account> findAll() {
+        return accounts;
     }
 
     @Override
     public void delete(String id) {
-
+        accounts.remove(findAccountById(id));
     }
 
     @Override
     public void delete(Account account) {
-
+        accounts.remove(account);
     }
 }
