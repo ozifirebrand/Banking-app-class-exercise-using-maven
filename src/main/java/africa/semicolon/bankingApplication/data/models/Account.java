@@ -1,6 +1,7 @@
 package africa.semicolon.bankingApplication.data.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 

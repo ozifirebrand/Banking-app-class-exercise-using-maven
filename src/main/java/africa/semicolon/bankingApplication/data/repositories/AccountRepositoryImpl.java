@@ -5,30 +5,26 @@ import africa.semicolon.bankingApplication.data.models.Account;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountRepositoryImpl implements AccountRepository{
-
+public class AccountRepositoryImpl implements AccountRepository {
+    private final List<Account> accounts = new ArrayList<>();
     @Override
     public Account save(Account account) {
-        return account;
+        accounts.add(account);
+        return account ;
     }
 
     @Override
-    public Account findByAccountId(String id) {
-        return null;
+    public Account findByCustomerId(String customerId) {
+        for (Account account: accounts){
+            if ( account.getCustomerId().equalsIgnoreCase(customerId) ){
+                return account;
+            }
+        }
+        return null ;
     }
 
     @Override
     public void delete(Account account) {
-
-    }
-
-    @Override
-    public void delete(String id) {
-
-    }
-
-    @Override
-    public List<Account> findAll() {
-        return null;
+        accounts.remove(account);
     }
 }
