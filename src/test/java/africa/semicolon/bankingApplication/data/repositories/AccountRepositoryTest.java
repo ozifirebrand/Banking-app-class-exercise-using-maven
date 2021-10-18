@@ -44,6 +44,31 @@ public class AccountRepositoryTest {
         accountRepository.delete(account);
         assertNull(accountRepository.findByCustomerId("84992"));
     }
+
+    @Test
+    public void test_deleteById(){
+        Account account = new Account();
+        account.setAccountNumber("348390284");
+        account.setCustomerId("84992");
+        account.setAccountType(AccountType.SAVINGS);
+        accountRepository.save(account);
+        accountRepository.deleteById("84992");
+        assertNull(accountRepository.findByCustomerId("84992"));
+    }
+
+    @Test
+    public void test_findAll(){
+        Account account = new Account();
+        account.setAccountNumber("348390284");
+        account.setCustomerId("84992");
+        account.setAccountType(AccountType.SAVINGS);
+        accountRepository.save(account);
+        accountRepository.save(account);
+        accountRepository.save(account);
+        accountRepository.save(account);
+        assertEquals(4, accountRepository.findAll().size());
+
+    }
 }
 
     /*mvcs ie. models views/facade controllers and services

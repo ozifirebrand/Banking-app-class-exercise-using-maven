@@ -27,4 +27,15 @@ public class AccountRepositoryImpl implements AccountRepository {
     public void delete(Account account) {
         accounts.remove(account);
     }
+
+    @Override
+    public void deleteById(String accountById) {
+        Account account = findByCustomerId(accountById);
+        delete(account);
+    }
+
+    @Override
+    public List<Account> findAll() {
+        return accounts;
+    }
 }
