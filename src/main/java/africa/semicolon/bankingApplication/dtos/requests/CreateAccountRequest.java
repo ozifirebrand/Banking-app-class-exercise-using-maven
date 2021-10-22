@@ -9,4 +9,5 @@ public class CreateAccountRequest {
     private String firstName;
     private String lastName;
     private AccountType accountType;
+    private String bvn;
 }

@@ -4,10 +4,10 @@ import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-@Data
 
+@Data
 public class Bank {
-    private final String id;
-    private final String name;
-    private final List<Account> accounts = new ArrayList<Account>();
+    private  String id;
+    private  String name;
+    private  List<Account> accounts = new ArrayList<>();
 }
