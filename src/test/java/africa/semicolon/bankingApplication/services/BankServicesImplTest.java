@@ -109,5 +109,21 @@ class BankServicesImplTest {
         assertEquals("0300000001", adesuaAccountNumber );
     }
 
+    @Test
+    public void test_whenAccountIsCreated_customerIsCreated(){
+        String gtCoId = bankServices.createBank("Gt co");
+
+        CreateAccountRequest jerryForm = new CreateAccountRequest();
+        jerryForm.setAccountType(AccountType.CURRENT);
+        jerryForm.setBankId("01");
+        jerryForm.setFirstName("Jerry");
+        jerryForm.setLastName("Ifeanyi");
+        String jerryAccountNumber = bankServices.createAccount(jerryForm);
+
+        CustomerService customerService = new CustomerServiceImpl();
+
+        assertEquals(1, customerService.findAll().size());
+    }
+
 
 }
